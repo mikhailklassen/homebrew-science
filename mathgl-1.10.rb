@@ -16,7 +16,7 @@ class Mathgl < Formula
       s.gsub! /#include <png.h>/, "#include <zlib.h>\n#include <png.h>"
     end
 
-    system "./configure", "--prefix=#{prefix}"
+    system "./configure", "--prefix=#{prefix}", "--enable-qt"
     system "make"
     system "make install"
   end
